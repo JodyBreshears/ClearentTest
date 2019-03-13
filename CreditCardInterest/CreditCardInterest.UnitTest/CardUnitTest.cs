@@ -1,4 +1,5 @@
 ﻿using CreditCardInterestLib;
+using CreditCardInterestLib.Cards;
 using NUnit.Framework;
 
 namespace CreditCardInterest.UnitTest {
@@ -6,8 +7,8 @@ namespace CreditCardInterest.UnitTest {
     public class CardUnitTest {
         [Test]
         public void When_CardIsCreateWithName_Then_NamePropertyIsName() {
-            Card card = new Card("CardName");
-            Assert.That(card.Name, Is.EqualTo("CardName"));
+            Card visaCard = new VisaCard("CardName", 100, 0.1);
+            Assert.That(visaCard.Name, Is.EqualTo("CardName"));
         }
     }
 }

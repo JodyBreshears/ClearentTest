@@ -4,7 +4,9 @@ namespace CreditCardInterestLib
 {
     public interface IPerson
     {
-        ICollection<IWallet> Wallets { get; }
+        List<IWallet> Wallets { get; }
         string Name { get; }
+        double Interest { get; }
+        Person Clone(List<IWallet> wallets, double interest);
     }
 }

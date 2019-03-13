@@ -10,5 +10,20 @@ namespace CreditCardInterest.UnitTest {
             Card visaCard = new VisaCard("CardName", 100, 0.1);
             Assert.That(visaCard.Name, Is.EqualTo("CardName"));
         }
+
+//        [Test]
+//        public void BalancePropertyIsSetable() {
+//            Card visaCard = new VisaCard("CardName", 100, 0.1);
+//            visaCard.Balance = 100;
+//            Assert.That(visaCard.Balance, Is.EqualTo(100).Within(.001));
+//        }
+//
+//        [Test]
+//        public void InterestRateIsSetable()
+//        {
+//            Card visaCard = new VisaCard("CardName", 100, 0.1);
+//            visaCard.Rate = .01;
+//            Assert.That(visaCard.Rate,Is.EqualTo(.01).Within(.001));
+//        }
     }
 }

@@ -20,10 +20,12 @@ namespace CreditCardInterest.AcceptanceTest
                     new DiscoverCard("DiscoverCard1", 100, .1)
                 })});
 
-            IInterestCalculator interest = new SimpleInterestCalculator();
+            IPersonInterestCalculator interest = new FullPersonInterestCalculator(new SimpleInterestCalculator());
+
 
             Assert.That(interest.ComputeTotalInterestForPerson(person,1), Is.EqualTo(30));
             //Assert.That(interest.ComputeTotalInterestForCard(person, 1), Is.EqualTo(30));
+//            Assert.That(per);
 
         }
 

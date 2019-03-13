@@ -9,7 +9,20 @@ namespace CreditCardInterestLib {
             Name = name;
         }
 
+        private Person(string name, List<IWallet> wallets, double interest) : this(name, wallets)
+        {
+            Interest = interest;
+        }
+
+        public double Interest { get; }
+
         public string Name { get; }
-        public ICollection<IWallet> Wallets { get; }
+
+        public List<IWallet> Wallets { get; }
+
+        public Person Clone(List<IWallet> wallets, double interest)
+        {
+            return new Person(Name,wallets,interest);
+        }
     }
 }

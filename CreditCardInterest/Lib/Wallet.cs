@@ -13,7 +13,7 @@ namespace CreditCardInterestLib {
         }
 
         public string Name { get; }
-        public ICollection<Card> Cards { get; }
+        public List<Card> Cards { get; }
         public double Interest { get; }
 
         public Wallet Clone( List<Card> cards,double interest) {
